@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AVENZA — A Rarer Kind of Address</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Progress rail (signature element) -->
+<div class="rail" aria-hidden="true">
+  <div class="rail-track"><div class="rail-fill"></div></div>
+  <span class="rail-tick" style="top:0%"></span>
+  <span class="rail-tick" style="top:25%"></span>
+  <span class="rail-tick" style="top:50%"></span>
+  <span class="rail-tick" style="top:75%"></span>
+  <span class="rail-tick" style="top:100%"></span>
+</div>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <div class="loader-noise"></div>
+  <div class="loader-inner">
+    <div class="loader-mark">AVENZA</div>
+    <div class="loader-line-wrap"><div class="loader-line" id="loaderLine"></div></div>
+    <div class="loader-pct" id="loaderPct">00</div>
+    <button class="loader-skip" id="skipIntro">Skip Intro</button>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="siteNav">
+  <a href="#" class="nav-logo">AVENZA</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- FULLSCREEN MENU -->
+<div class="menu" id="siteMenu" aria-hidden="true">
+  <div class="menu-bg" id="menuBg"></div>
+  <div class="menu-grain"></div>
+  <div class="menu-top">
+    <span class="menu-top-mark">AVENZA</span>
+    <button class="menu-close" id="menuClose" aria-label="Close menu">
+      <span class="menu-close-label">Close</span>
+      <span class="menu-close-icon"><i></i><i></i></span>
+    </button>
+  </div>
+  <nav class="menu-list">
+    <a href="#hero" class="menu-link" data-bg="hero"><span class="menu-link-index">01</span><span class="menu-link-text">Home</span></a>
+    <a href="#properties" class="menu-link" data-bg="properties"><span class="menu-link-index">02</span><span class="menu-link-text">Properties</span></a>
+    <a href="#projects" class="menu-link" data-bg="projects"><span class="menu-link-index">03</span><span class="menu-link-text">Projects</span></a>
+    <a href="#about" class="menu-link" data-bg="about"><span class="menu-link-index">04</span><span class="menu-link-text">About</span></a>
+    <a href="#gallery" class="menu-link" data-bg="gallery"><span class="menu-link-index">05</span><span class="menu-link-text">Gallery</span></a>
+    <a href="#customize" class="menu-link" data-bg="customize"><span class="menu-link-index">06</span><span class="menu-link-text">Customize Your Property</span></a>
+    <a href="#testimonials" class="menu-link" data-bg="testimonials"><span class="menu-link-index">07</span><span class="menu-link-text">Testimonials</span></a>
+    <a href="#contact" class="menu-link" data-bg="contact"><span class="menu-link-index">08</span><span class="menu-link-text">Contact</span></a>
+  </nav>
+  <div class="menu-footer">
+    <span>AVENZA Group — 18 Countries</span>
+    <span>enquiries@avenzagroup.com</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-pin">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-gold-sheen" aria-hidden="true"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-vignette" aria-hidden="true"></div>
+
+    <div class="hero-loader" id="heroFrameLoader">
+      <span class="hero-loader-mark">AVENZA</span>
+      <div class="hero-loader-bar"><div class="hero-loader-fill" id="heroFrameLoaderFill"></div></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Est. Presence Across 18 Countries</p>
+      <h1 class="hero-title" id="heroTitle">A Rarer Kind of Address</h1>
+      <p class="hero-sub" id="heroSub">
+        <span class="line">AVENZA curates the world's most consequential properties</span>
+        <span class="line">for those who measure a home by what it commands, not what it costs.</span>
+      </p>
+      <a href="#properties" class="hero-cta">
+        <span class="cta-label">Enter the Collection</span>
+        <span class="cta-dot"></span>
+      </a>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll to begin</span>
+      <div class="scroll-line"><div class="scroll-line-fill"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST / STATISTICS -->
+<section class="trust" id="trust">
+  <p class="trust-eyebrow">A Presence Measured, Not Advertised</p>
+  <div class="trust-grid">
+    <div class="stat">
+      <span class="stat-num" data-target="120" data-suffix="+">0</span>
+      <span class="stat-label">Luxury Villas</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-target="18" data-suffix="">0</span>
+      <span class="stat-label">Countries</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-target="950" data-suffix="+">0</span>
+      <span class="stat-label">Clients</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-target="2.3" data-suffix="B+" data-decimal="1" data-prefix="$">0</span>
+      <span class="stat-label">Property Value</span>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROPERTIES — stacking card reveal -->
+<section class="properties" id="properties">
+  <div class="properties-head">
+    <p class="section-eyebrow">The Collection</p>
+    <h2 class="section-title">Featured Properties</h2>
+  </div>
+
+  <div class="prop-card" data-index="01">
+    <div class="prop-media">
+      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80&auto=format&fit=crop" alt="Villa Meridian exterior with pool" loading="lazy">
+    </div>
+    <div class="prop-info">
+      <span class="prop-num">01 / 05</span>
+      <h3 class="prop-name">Villa Meridian</h3>
+      <p class="prop-loc">Costa Smeralda, Italy</p>
+      <p class="prop-desc">Seven bedrooms, a cantilevered infinity pool, and an unbroken sightline to the Tyrrhenian Sea.</p>
+      <div class="prop-meta">
+        <span>7 Beds</span><span class="divider"></span><span>9 Baths</span><span class="divider"></span><span>1,240 m²</span>
+      </div>
+      <a href="#" class="prop-cta"><span>View Residence</span><span class="cta-dot"></span></a>
+    </div>
+  </div>
+
+  <div class="prop-card" data-index="02">
+    <div class="prop-media">
+      <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1600&q=80&auto=format&fit=crop" alt="Modern concrete estate under blue sky" loading="lazy">
+    </div>
+    <div class="prop-info">
+      <span class="prop-num">02 / 05</span>
+      <h3 class="prop-name">The Obsidian House</h3>
+      <p class="prop-loc">Beverly Hills, USA</p>
+      <p class="prop-desc">A brutalist-inspired estate carved into the hillside, wrapped in glass and matte concrete.</p>
+      <div class="prop-meta">
+        <span>6 Beds</span><span class="divider"></span><span>8 Baths</span><span class="divider"></span><span>980 m²</span>
+      </div>
+      <a href="#" class="prop-cta"><span>View Residence</span><span class="cta-dot"></span></a>
+    </div>
+  </div>
+
+  <div class="prop-card" data-index="03">
+    <div class="prop-media">
+      <img src="https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?w=1600&q=80&auto=format&fit=crop" alt="Illuminated luxury house at dusk" loading="lazy">
+    </div>
+    <div class="prop-info">
+      <span class="prop-num">03 / 05</span>
+      <h3 class="prop-name">Casa Lumen</h3>
+      <p class="prop-loc">Punta del Este, Uruguay</p>
+      <p class="prop-desc">Designed around natural light, with a facade that glows amber at dusk and dissolves at dawn.</p>
+      <div class="prop-meta">
+        <span>5 Beds</span><span class="divider"></span><span>6 Baths</span><span class="divider"></span><span>820 m²</span>
+      </div>
+      <a href="#" class="prop-cta"><span>View Residence</span><span class="cta-dot"></span></a>
+    </div>
+  </div>
+
+  <div class="prop-card" data-index="04">
+    <div class="prop-media">
+      <img src="https://images.unsplash.com/photo-1706808849780-7a04fbac83ef?w=1600&q=80&auto=format&fit=crop" alt="Modern house with pool and lounge chairs" loading="lazy">
+    </div>
+    <div class="prop-info">
+      <span class="prop-num">04 / 05</span>
+      <h3 class="prop-name">Aureate Residence</h3>
+      <p class="prop-loc">Palm Jumeirah, UAE</p>
+      <p class="prop-desc">A private-island silhouette with a 40-metre pool deck and champagne-gold interior detailing.</p>
+      <div class="prop-meta">
+        <span>8 Beds</span><span class="divider"></span><span>10 Baths</span><span class="divider"></span><span>1,560 m²</span>
+      </div>
+      <a href="#" class="prop-cta"><span>View Residence</span><span class="cta-dot"></span></a>
+    </div>
+  </div>
+
+  <div class="prop-card" data-index="05">
+    <div class="prop-media">
+      <img src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=1600&q=80&auto=format&fit=crop" alt="Water pool near house during golden hour" loading="lazy">
+    </div>
+    <div class="prop-info">
+      <span class="prop-num">05 / 05</span>
+      <h3 class="prop-name">Solmare Estate</h3>
+      <p class="prop-loc">Santorini, Greece</p>
+      <p class="prop-desc">Carved into the caldera, facing west, built for a single uninterrupted view of the sunset.</p>
+      <div class="prop-meta">
+        <span>4 Beds</span><span class="divider"></span><span>5 Baths</span><span class="divider"></span><span>640 m²</span>
+      </div>
+      <a href="#" class="prop-cta"><span>View Residence</span><span class="cta-dot"></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS — cinematic pinned storytelling -->
+<section class="projects" id="projects">
+  <div class="projects-head">
+    <p class="section-eyebrow">Under Development</p>
+    <h2 class="section-title">Projects Across Continents</h2>
+  </div>
+
+  <div class="proj-pin">
+    <div class="proj-slide" data-proj="1">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1800&q=80&auto=format&fit=crop" alt="Modern architecture under construction" loading="lazy">
+      <div class="proj-copy">
+        <span class="proj-chapter">Chapter 01 — Foundation</span>
+        <h3>AVENZA Skyline Residences</h3>
+        <p>Singapore · Groundbreaking 2025 · A vertical estate of 40 private sky-villas, each with its own garden terrace.</p>
+      </div>
+    </div>
+    <div class="proj-slide" data-proj="2">
+      <img src="https://images.unsplash.com/photo-1613977257365-aaae5a9817ff?w=1800&q=80&auto=format&fit=crop" alt="Structural concrete forms taking shape" loading="lazy">
+      <div class="proj-copy">
+        <span class="proj-chapter">Chapter 02 — Structure</span>
+        <h3>Marisol Cliffside Estates</h3>
+        <p>Amalfi Coast · Structural phase · Twelve residences cut directly into the limestone, facing the Tyrrhenian.</p>
+      </div>
+    </div>
+    <div class="proj-slide" data-proj="3">
+      <img src="https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?w=1800&q=80&auto=format&fit=crop" alt="Aerial view of near-complete estate" loading="lazy">
+      <div class="proj-copy">
+        <span class="proj-chapter">Chapter 03 — Near Completion</span>
+        <h3>Meru Highland Reserve</h3>
+        <p>Queenstown · Interior fit-out · Eight lodges set into native highland, drone-surveyed weekly through delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-intro">
+    <p class="section-eyebrow">Since 2011</p>
+    <h2 class="section-title">A Philosophy, Before It Was a Company</h2>
+    <p class="about-lead">AVENZA began with a single conviction: that a home should outlast trends, outlast owners, and outlast the market itself. Every residence we build is measured against that standard first.</p>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-track"><div class="timeline-fill"></div></div>
+
+    <div class="tl-item">
+      <span class="tl-year">2011</span>
+      <div class="tl-body">
+        <h4>Founded in Milan</h4>
+        <p>AVENZA opens with a single completed villa and a founding belief: restraint is the rarest luxury.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <span class="tl-year">2016</span>
+      <div class="tl-body">
+        <h4>First International Estate</h4>
+        <p>Expansion into the Mediterranean coast marks AVENZA's first project outside Italy.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <span class="tl-year">2020</span>
+      <div class="tl-body">
+        <h4>$1B Portfolio Milestone</h4>
+        <p>Cumulative property value under AVENZA's stewardship surpasses one billion dollars.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <span class="tl-year">2025</span>
+      <div class="tl-body">
+        <h4>18 Countries, One Standard</h4>
+        <p>AVENZA now operates across five continents without diluting its founding philosophy.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-gallery">
+    <img src="https://images.unsplash.com/photo-1591474200742-8e512e6f98f8?w=1000&q=80&auto=format&fit=crop" alt="AVENZA office building exterior" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1000&q=80&auto=format&fit=crop" alt="AVENZA studio interior" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1000&q=80&auto=format&fit=crop" alt="AVENZA design review space" loading="lazy">
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="properties-head">
+    <p class="section-eyebrow">In Detail</p>
+    <h2 class="section-title">Gallery</h2>
+  </div>
+
+  <div class="masonry">
+    <figure class="mason-item span-tall" data-tilt>
+      <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1000&q=80&auto=format&fit=crop" alt="Infinity pool overlooking coastline" loading="lazy">
+      <figcaption><span>Infinity Edge</span><em>Villa Meridian</em></figcaption>
+    </figure>
+    <figure class="mason-item" data-tilt>
+      <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&q=80&auto=format&fit=crop" alt="Concrete facade detail" loading="lazy">
+      <figcaption><span>Facade Study</span><em>The Obsidian House</em></figcaption>
+    </figure>
+    <figure class="mason-item span-wide" data-tilt>
+      <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1400&q=80&auto=format&fit=crop" alt="Living room with marble finish" loading="lazy">
+      <figcaption><span>Living Pavilion</span><em>Casa Lumen</em></figcaption>
+    </figure>
+    <figure class="mason-item" data-tilt>
+      <img src="https://images.unsplash.com/photo-1593714604578-d9e41b00c6c6?w=900&q=80&auto=format&fit=crop" alt="Poolside at dusk" loading="lazy">
+      <figcaption><span>Golden Hour</span><em>Solmare Estate</em></figcaption>
+    </figure>
+    <figure class="mason-item span-tall" data-tilt>
+      <img src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=1000&q=80&auto=format&fit=crop" alt="Water feature near residence" loading="lazy">
+      <figcaption><span>Reflecting Pool</span><em>Aureate Residence</em></figcaption>
+    </figure>
+    <figure class="mason-item" data-tilt>
+      <img src="https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?w=900&q=80&auto=format&fit=crop" alt="Residence illuminated at night" loading="lazy">
+      <figcaption><span>Night Silhouette</span><em>Casa Lumen</em></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- CUSTOMIZE YOUR PROPERTY -->
+<section class="customize" id="customize">
+  <div class="properties-head">
+    <p class="section-eyebrow">Configure</p>
+    <h2 class="section-title">Customize Your Property</h2>
+    <p class="cust-sub">A procedural preview — drag to rotate, scroll to zoom. Swap materials the way you'd configure a luxury car.</p>
+  </div>
+
+  <div class="cust-stage">
+    <div class="cust-canvas-wrap">
+      <canvas id="villaCanvas"></canvas>
+      <div class="cust-nav-arrows">
+        <button id="rotLeft" aria-label="Rotate left">←</button>
+        <button id="rotRight" aria-label="Rotate right">→</button>
+      </div>
+      <div class="cust-loading" id="custLoading">Loading configurator…</div>
+    </div>
+
+    <div class="cust-panel">
+      <div class="cust-group" data-group="facade">
+        <h4>Facade</h4>
+        <div class="swatches">
+          <button class="swatch active" style="--c:#EDE7DA" data-value="0xEDE7DA"></button>
+          <button class="swatch" style="--c:#2B2B29" data-value="0x2B2B29"></button>
+          <button class="swatch" style="--c:#8B8478" data-value="0x8B8478"></button>
+          <button class="swatch" style="--c:#C9A26A" data-value="0xC9A26A"></button>
+        </div>
+      </div>
+      <div class="cust-group" data-group="roof">
+        <h4>Roof</h4>
+        <div class="swatches">
+          <button class="swatch active" style="--c:#16140F" data-value="0x16140F"></button>
+          <button class="swatch" style="--c:#3B3B38" data-value="0x3B3B38"></button>
+          <button class="swatch" style="--c:#C9A26A" data-value="0xC9A26A"></button>
+        </div>
+      </div>
+      <div class="cust-group" data-group="pool">
+        <h4>Pool</h4>
+        <div class="swatches">
+          <button class="swatch active" style="--c:#2E7C8C" data-value="0x2E7C8C"></button>
+          <button class="swatch" style="--c:#1C4F5C" data-value="0x1C4F5C"></button>
+          <button class="swatch" style="--c:#3E9C8C" data-value="0x3E9C8C"></button>
+        </div>
+      </div>
+      <div class="cust-group" data-group="landscape">
+        <h4>Landscape</h4>
+        <div class="swatches">
+          <button class="swatch active" style="--c:#5C6B4A" data-value="0x5C6B4A"></button>
+          <button class="swatch" style="--c:#C9BFA0" data-value="0xC9BFA0"></button>
+          <button class="swatch" style="--c:#8A8272" data-value="0x8A8272"></button>
+        </div>
+      </div>
+      <div class="cust-group" data-group="lighting">
+        <h4>Lighting</h4>
+        <div class="swatches">
+          <button class="swatch active" style="--c:#FFE9C4" data-value="0xFFE9C4"></button>
+          <button class="swatch" style="--c:#C9E6FF" data-value="0xC9E6FF"></button>
+          <button class="swatch" style="--c:#FFFFFF" data-value="0xFFFFFF"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS — moving vertical walls -->
+<section class="testimonials" id="testimonials">
+  <div class="properties-head">
+    <p class="section-eyebrow">Word of Mouth</p>
+    <h2 class="section-title">What Our Clients Say</h2>
+  </div>
+
+  <div class="wall-viewport">
+    <div class="wall-col wall-up">
+      <div class="wall-track">
+        <div class="t-card"><p>"AVENZA didn't just find us a villa — they understood what silence and light were worth to us."</p><div class="t-who"><span>R. Whitfield</span><em>Costa Smeralda</em></div></div>
+        <div class="t-card"><p>"Every detail, from the first call to final walkthrough, felt considered rather than rehearsed."</p><div class="t-who"><span>M. Al-Farsi</span><em>Palm Jumeirah</em></div></div>
+        <div class="t-card"><p>"We looked at eleven other developers. None of them asked the questions AVENZA asked first."</p><div class="t-who"><span>S. Lindqvist</span><em>Lake Como</em></div></div>
+        <div class="t-card"><p>"The Meridian has outlived three renovations of neighboring properties. It hasn't needed one."</p><div class="t-who"><span>J. Okafor</span><em>Costa Smeralda</em></div></div>
+      </div>
+      <div class="wall-track" aria-hidden="true">
+        <div class="t-card"><p>"AVENZA didn't just find us a villa — they understood what silence and light were worth to us."</p><div class="t-who"><span>R. Whitfield</span><em>Costa Smeralda</em></div></div>
+        <div class="t-card"><p>"Every detail, from the first call to final walkthrough, felt considered rather than rehearsed."</p><div class="t-who"><span>M. Al-Farsi</span><em>Palm Jumeirah</em></div></div>
+        <div class="t-card"><p>"We looked at eleven other developers. None of them asked the questions AVENZA asked first."</p><div class="t-who"><span>S. Lindqvist</span><em>Lake Como</em></div></div>
+        <div class="t-card"><p>"The Meridian has outlived three renovations of neighboring properties. It hasn't needed one."</p><div class="t-who"><span>J. Okafor</span><em>Costa Smeralda</em></div></div>
+      </div>
+    </div>
+
+    <div class="wall-col wall-down">
+      <div class="wall-track">
+        <div class="t-card"><p>"Casa Lumen photographs beautifully. Living in it is better than the photographs."</p><div class="t-who"><span>A. Moreau</span><em>Punta del Este</em></div></div>
+        <div class="t-card"><p>"They said eighteen months. It was seventeen. That alone made them worth the premium."</p><div class="t-who"><span>D. Chen</span><em>Queenstown</em></div></div>
+        <div class="t-card"><p>"Our architect asked who designed the roofline. That question was worth the entire project."</p><div class="t-who"><span>K. Novak</span><em>Amalfi Coast</em></div></div>
+        <div class="t-card"><p>"A rare developer that under-promises. We've since referred them to four friends."</p><div class="t-who"><span>P. Adeyemi</span><em>Singapore</em></div></div>
+      </div>
+      <div class="wall-track" aria-hidden="true">
+        <div class="t-card"><p>"Casa Lumen photographs beautifully. Living in it is better than the photographs."</p><div class="t-who"><span>A. Moreau</span><em>Punta del Este</em></div></div>
+        <div class="t-card"><p>"They said eighteen months. It was seventeen. That alone made them worth the premium."</p><div class="t-who"><span>D. Chen</span><em>Queenstown</em></div></div>
+        <div class="t-card"><p>"Our architect asked who designed the roofline. That question was worth the entire project."</p><div class="t-who"><span>K. Novak</span><em>Amalfi Coast</em></div></div>
+        <div class="t-card"><p>"A rare developer that under-promises. We've since referred them to four friends."</p><div class="t-who"><span>P. Adeyemi</span><em>Singapore</em></div></div>
+      </div>
+    </div>
+
+    <div class="wall-col wall-up wall-hide-mobile">
+      <div class="wall-track">
+        <div class="t-card"><p>"They preserved the original olive trees on-site. Nobody asked them to. That says everything."</p><div class="t-who"><span>F. Rossi</span><em>Amalfi Coast</em></div></div>
+        <div class="t-card"><p>"AVENZA's after-sale team still answers on weekends, two years in. Unheard of at this price."</p><div class="t-who"><span>L. Sørensen</span><em>Lake Como</em></div></div>
+        <div class="t-card"><p>"The Aureate's gold detailing looks handcrafted because it was. Nothing there is decorative filler."</p><div class="t-who"><span>H. Al-Mansoori</span><em>Palm Jumeirah</em></div></div>
+        <div class="t-card"><p>"We were investors first, homeowners second. AVENZA never let either priority feel neglected."</p><div class="t-who"><span>T. Fitzgerald</span><em>Beverly Hills</em></div></div>
+      </div>
+      <div class="wall-track" aria-hidden="true">
+        <div class="t-card"><p>"They preserved the original olive trees on-site. Nobody asked them to. That says everything."</p><div class="t-who"><span>F. Rossi</span><em>Amalfi Coast</em></div></div>
+        <div class="t-card"><p>"AVENZA's after-sale team still answers on weekends, two years in. Unheard of at this price."</p><div class="t-who"><span>L. Sørensen</span><em>Lake Como</em></div></div>
+        <div class="t-card"><p>"The Aureate's gold detailing looks handcrafted because it was. Nothing there is decorative filler."</p><div class="t-who"><span>H. Al-Mansoori</span><em>Palm Jumeirah</em></div></div>
+        <div class="t-card"><p>"We were investors first, homeowners second. AVENZA never let either priority feel neglected."</p><div class="t-who"><span>T. Fitzgerald</span><em>Beverly Hills</em></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p class="section-eyebrow">Begin the Conversation</p>
+      <h2 class="section-title">Contact AVENZA</h2>
+      <p class="about-lead" style="margin-top:18px;text-align:left;max-width:44ch;">Whether you're acquiring, investing, or simply curious what a considered property feels like — we respond personally, always.</p>
+
+      <div class="office-list">
+        <div class="office"><h4>Milan</h4><p>Via Montenapoleone 12, 20121</p></div>
+        <div class="office"><h4>Dubai</h4><p>Palm Jumeirah, Frond G</p></div>
+        <div class="office"><h4>Singapore</h4><p>Marina Bay Financial Centre</p></div>
+      </div>
+
+      <div class="map-embed">
+        <iframe title="AVENZA office locations map" src="https://www.google.com/maps?q=Milan,Italy&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <div class="field">
+        <input type="text" id="cf-name" required>
+        <label for="cf-name">Full Name</label>
+      </div>
+      <div class="field">
+        <input type="email" id="cf-email" required>
+        <label for="cf-email">Email Address</label>
+      </div>
+      <div class="field">
+        <input type="text" id="cf-interest">
+        <label for="cf-interest">Property of Interest</label>
+      </div>
+      <div class="field">
+        <textarea id="cf-message" rows="4" required></textarea>
+        <label for="cf-message">Message</label>
+      </div>
+      <button type="submit" class="magnetic-submit">
+        <span>Book a Visit</span>
+      </button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-noise"></div>
+  <div class="footer-top">
+    <span class="footer-logo">AVENZA</span>
+    <nav class="footer-nav">
+      <a href="#hero">Home</a><a href="#properties">Properties</a><a href="#projects">Projects</a>
+      <a href="#about">About</a><a href="#gallery">Gallery</a><a href="#customize">Customize</a>
+      <a href="#testimonials">Testimonials</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <div class="footer-social">
+      <a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">Pinterest</a>
+    </div>
+    <form class="newsletter">
+      <input type="email" placeholder="Join our list" aria-label="Newsletter email">
+      <button type="submit" aria-label="Subscribe">→</button>
+    </form>
+    <span class="footer-legal">© 2026 AVENZA Group. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/split-type@0.3.4/umd/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
