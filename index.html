@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AVENZA — A Rarer Kind of Address</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Progress rail (signature element) -->
+<div class="rail" aria-hidden="true">
+  <div class="rail-track"><div class="rail-fill"></div></div>
+  <span class="rail-tick" style="top:0%"></span>
+  <span class="rail-tick" style="top:25%"></span>
+  <span class="rail-tick" style="top:50%"></span>
+  <span class="rail-tick" style="top:75%"></span>
+  <span class="rail-tick" style="top:100%"></span>
+</div>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <div class="loader-noise"></div>
+  <div class="loader-inner">
+    <div class="loader-mark">AVENZA</div>
+    <div class="loader-line-wrap"><div class="loader-line" id="loaderLine"></div></div>
+    <div class="loader-pct" id="loaderPct">00</div>
+    <button class="loader-skip" id="skipIntro">Skip Intro</button>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="siteNav">
+  <a href="#" class="nav-logo">AVENZA</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- FULLSCREEN MENU -->
+<div class="menu" id="siteMenu" aria-hidden="true">
+  <div class="menu-bg" id="menuBg"></div>
+  <button class="menu-close" id="menuClose" aria-label="Close menu">Close</button>
+  <nav class="menu-list">
+    <a href="#hero" class="menu-link" data-bg="hero" data-index="01">Home</a>
+    <a href="#properties" class="menu-link" data-bg="properties" data-index="02">Properties</a>
+    <a href="#" class="menu-link" data-bg="projects" data-index="03">Projects</a>
+    <a href="#" class="menu-link" data-bg="about" data-index="04">About</a>
+    <a href="#" class="menu-link" data-bg="gallery" data-index="05">Gallery</a>
+    <a href="#" class="menu-link" data-bg="customize" data-index="06">Customize Your Property</a>
+    <a href="#" class="menu-link" data-bg="testimonials" data-index="07">Testimonials</a>
+    <a href="#" class="menu-link" data-bg="contact" data-index="08">Contact</a>
+  </nav>
+  <div class="menu-footer">
+    <span>AVENZA Group — 18 Countries</span>
+    <span>enquiries@avenzagroup.com</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-pin">
+    <video class="hero-video" id="heroVideo" muted playsinline preload="auto">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Est. Presence Across 18 Countries</p>
+      <h1 class="hero-title" id="heroTitle">A Rarer Kind of Address</h1>
+      <p class="hero-sub" id="heroSub">
+        <span class="line">AVENZA curates the world's most consequential properties</span>
+        <span class="line">for those who measure a home by what it commands, not what it costs.</span>
+      </p>
+      <a href="#properties" class="hero-cta">
+        <span class="cta-label">Enter the Collection</span>
+        <span class="cta-dot"></span>
+      </a>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll to begin</span>
+      <div class="scroll-line"><div class="scroll-line-fill"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST / STATISTICS -->
+<section class="trust" id="trust">
+  <p class="trust-eyebrow">A Presence Measured, Not Advertised</p>
+  <div class="trust-grid">
+    <div class="stat">
+      <span class="stat-num" data-target="120" data-suffix="+">0</span>
+      <span class="stat-label">Luxury Villas</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-target="18" data-suffix="">0</span>
+      <span class="stat-label">Countries</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-target="950" data-suffix="+">0</span>
+      <span class="stat-label">Clients</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" data-target="2.3" data-suffix="B+" data-decimal="1" data-prefix="$">0</span>
+      <span class="stat-label">Property Value</span>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROPERTIES — stacking card reveal -->
+<section class="properties" id="properties">
+  <div class="properties-head">
+    <p class="section-eyebrow">The Collection</p>
+    <h2 class="section-title">Featured Properties</h2>
+  </div>
+
+  <div class="prop-card" data-index="01">
+    <div class="prop-media">
+      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=80&auto=format&fit=crop" alt="Villa Meridian exterior with pool" loading="lazy">
+    </div>
+    <div class="prop-info">
+      <span class="prop-num">01 / 05</span>
+      <h3 class="prop-name">Villa Meridian</h3>
+      <p class="prop-loc">Costa Smeralda, Italy</p>
+      <p class="prop-desc">Seven bedrooms, a cantilevered infinity pool, and an unbroken sightline to the Tyrrhenian Sea.</p>
+      <div class="prop-meta">
+        <span>7 Beds</span><span class="divider"></span><span>9 Baths</span><span class="divider"></span><span>1,240 m²</span>
+      </div>
+      <a href="#" class="prop-cta"><span>View Residence</span><span class="cta-dot"></span></a>
+    </div>
+  </div>
+
+  <div class="prop-card" data-index="02">
+    <div class="prop-media">
+      <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1600&q=80&auto=format&fit=crop" alt="Modern concrete estate under blue sky" loading="lazy">
+    </div>
+    <div class="prop-info">
+      <span class="prop-num">02 / 05</span>
+      <h3 class="prop-name">The Obsidian House</h3>
+      <p class="prop-loc">Beverly Hills, USA</p>
+      <p class="prop-desc">A brutalist-inspired estate carved into the hillside, wrapped in glass and matte concrete.</p>
+      <div class="prop-meta">
+        <span>6 Beds</span><span class="divider"></span><span>8 Baths</span><span class="divider"></span><span>980 m²</span>
+      </div>
+      <a href="#" class="prop-cta"><span>View Residence</span><span class="cta-dot"></span></a>
+    </div>
+  </div>
+
+  <div class="prop-card" data-index="03">
+    <div class="prop-media">
+      <img src="https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5?w=1600&q=80&auto=format&fit=crop" alt="Illuminated luxury house at dusk" loading="lazy">
+    </div>
+    <div class="prop-info">
+      <span class="prop-num">03 / 05</span>
+      <h3 class="prop-name">Casa Lumen</h3>
+      <p class="prop-loc">Punta del Este, Uruguay</p>
+      <p class="prop-desc">Designed around natural light, with a facade that glows amber at dusk and dissolves at dawn.</p>
+      <div class="prop-meta">
+        <span>5 Beds</span><span class="divider"></span><span>6 Baths</span><span class="divider"></span><span>820 m²</span>
+      </div>
+      <a href="#" class="prop-cta"><span>View Residence</span><span class="cta-dot"></span></a>
+    </div>
+  </div>
+
+  <div class="prop-card" data-index="04">
+    <div class="prop-media">
+      <img src="https://images.unsplash.com/photo-1706808849780-7a04fbac83ef?w=1600&q=80&auto=format&fit=crop" alt="Modern house with pool and lounge chairs" loading="lazy">
+    </div>
+    <div class="prop-info">
+      <span class="prop-num">04 / 05</span>
+      <h3 class="prop-name">Aureate Residence</h3>
+      <p class="prop-loc">Palm Jumeirah, UAE</p>
+      <p class="prop-desc">A private-island silhouette with a 40-metre pool deck and champagne-gold interior detailing.</p>
+      <div class="prop-meta">
+        <span>8 Beds</span><span class="divider"></span><span>10 Baths</span><span class="divider"></span><span>1,560 m²</span>
+      </div>
+      <a href="#" class="prop-cta"><span>View Residence</span><span class="cta-dot"></span></a>
+    </div>
+  </div>
+
+  <div class="prop-card" data-index="05">
+    <div class="prop-media">
+      <img src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=1600&q=80&auto=format&fit=crop" alt="Water pool near house during golden hour" loading="lazy">
+    </div>
+    <div class="prop-info">
+      <span class="prop-num">05 / 05</span>
+      <h3 class="prop-name">Solmare Estate</h3>
+      <p class="prop-loc">Santorini, Greece</p>
+      <p class="prop-desc">Carved into the caldera, facing west, built for a single uninterrupted view of the sunset.</p>
+      <div class="prop-meta">
+        <span>4 Beds</span><span class="divider"></span><span>5 Baths</span><span class="divider"></span><span>640 m²</span>
+      </div>
+      <a href="#" class="prop-cta"><span>View Residence</span><span class="cta-dot"></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Placeholder — Projects section built next -->
+<section class="next-stub" id="projects">
+  <p>Projects section — built next, on your approval.</p>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/split-type@0.3.4/umd/index.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
